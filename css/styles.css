@@ -102,6 +102,7 @@ img {
 .section-text {
   letter-spacing: 0.02em;
   line-height: 1.5;
+  color: var(--main-text-color);
 }
 
 /* heder */
@@ -113,6 +114,8 @@ img {
 
 .header {
   border-bottom: 1px solid var(--footer-text-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 /* site nav */
@@ -166,7 +169,12 @@ img {
   color: var(--nav-hover-caolor);
 }
 
+.current {
+  position: relative;
+}
+
 .current::after {
+  position: absolute;
   content: '';
   bottom: -1px;
   display: block;
@@ -214,6 +222,8 @@ img {
   text-align: center;
   background-color: var(--titel-text-color);
   padding: 188px 0;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -285,6 +295,7 @@ img {
 }
 
 /* What are we doing */
+
 .work-list {
   display: flex;
   flex-wrap: wrap;
@@ -319,14 +330,14 @@ img {
 
 .teammate-name {
   padding-top: 32px;
-  padding-bottom: 8px;
+  padding-bottom: 32px;
 }
 
 .socials-list {
   display: flex;
   justify-content: center;
-  padding-bottom: 32px;
   gap: 24px;
+  margin-top: 8px;
 }
 
 .socials-item {
@@ -365,14 +376,13 @@ img {
 
 .customers-item {
   width: 168px;
-  height: 88px;
 }
 
 .customers-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 88px;
   width: 100%;
   border: 1px solid var(--customers-color);
   border-radius: 4px;
